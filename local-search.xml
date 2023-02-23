@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>linux安装docker容器</title>
+    <link href="/2023/02/23/docker/"/>
+    <url>/2023/02/23/docker/</url>
+    
+    <content type="html"><![CDATA[<h2 id="使用-root-权限更新-yum-包（生产环境中此步操作需慎重，看自己情况，学习的话随便搞）"><a href="#使用-root-权限更新-yum-包（生产环境中此步操作需慎重，看自己情况，学习的话随便搞）" class="headerlink" title="使用 root 权限更新 yum 包（生产环境中此步操作需慎重，看自己情况，学习的话随便搞）"></a>使用 root 权限更新 yum 包（生产环境中此步操作需慎重，看自己情况，学习的话随便搞）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ yum -y update<br></code></pre></td></tr></table></figure><h3 id="这个命令不是必须执行的，看个人情况，后面出现不兼容的情况的话就必须update了"><a href="#这个命令不是必须执行的，看个人情况，后面出现不兼容的情况的话就必须update了" class="headerlink" title="这个命令不是必须执行的，看个人情况，后面出现不兼容的情况的话就必须update了"></a>这个命令不是必须执行的，看个人情况，后面出现不兼容的情况的话就必须update了</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum -y update：升级所有包同时也升级软件和系统内核；​ <br>yum -y upgrade：只升级所有包，不升级软件和系统内核<br></code></pre></td></tr></table></figure><h2 id="安装Docker的详细步骤"><a href="#安装Docker的详细步骤" class="headerlink" title="安装Docker的详细步骤"></a>安装Docker的详细步骤</h2><p>1.安装需要的软件包， yum-util 提供yum-config-manager功能，另两个是devicemapper驱动依赖</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum install -y yum-utils device-mapper-persistent-data lvm2<br></code></pre></td></tr></table></figure><p>2.设置 yum 源</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum-config-manager --add-repo http://download.docker.com/linux/centos/docker-ce.repo（中央仓库）<br>yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo（阿里仓库）<br></code></pre></td></tr></table></figure><p>3.选择docker版本并安装<br> （1）查看可用版本有哪些</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum list docker-ce --showduplicates | <span class="hljs-built_in">sort</span> -r<br></code></pre></td></tr></table></figure><p>（2）选择一个版本并安装：yum install docker-ce-版本号</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum -y install docker-ce-18.03.1.ce<br></code></pre></td></tr></table></figure><p> (3)启动 Docker 并设置开机自启</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"> systemctl start docker<br>systemctl <span class="hljs-built_in">enable</span> docker<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Ubuntu中显示yum命令找不到</title>
     <link href="/2023/02/23/yum/"/>
     <url>/2023/02/23/yum/</url>
