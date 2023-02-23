@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>Ubuntu中显示yum命令找不到</title>
+    <link href="/2023/02/23/yum/"/>
+    <url>/2023/02/23/yum/</url>
+    
+    <content type="html"><![CDATA[<h2 id="在Linux安装软件时需要用到yum命令-由于没有yum-报错："><a href="#在Linux安装软件时需要用到yum命令-由于没有yum-报错：" class="headerlink" title="在Linux安装软件时需要用到yum命令,由于没有yum,报错："></a>在Linux安装软件时需要用到yum命令,由于没有yum,报错：</h2><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo: yum: <span class="hljs-built_in">command</span> not found<br></code></pre></td></tr></table></figure><h2 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法"></a>解决方法</h2><p>1.首先切换到root用户身份<br>普通用户切换为root用户：在终端运行命令 sudo -s<br>2.然后检测是否安装了build-essential程序包,输入命令:<br>apt-get install build-essential<br>3.安装yum,输入命令:<br>apt-get install yum</p><p><img src= "https://img-blog.csdnimg.cn/20200801084059854.png" ></a></p><p>4.yum安装成功</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Command ‘yum‘ not found, did you mean 报错解决！</title>
+    <link href="/2023/02/23/utuban/"/>
+    <url>/2023/02/23/utuban/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="fouuu.com">fouuu</a>  本文转载自CSDN!版权归原作者所有！</p><h2 id="Command-‘yum’-not-found-did-you-mean"><a href="#Command-‘yum’-not-found-did-you-mean" class="headerlink" title="Command ‘yum’ not found, did you mean:"></a>Command ‘yum’ not found, did you mean:</h2><h3 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h3><p>apt-get属于ubuntu、Debian的包管理工具<br>所以当你准备安装某些包时，先对照一下你的Linux版本<br><img src="https://img-blog.csdnimg.cn/bfdfb65bac4e486e8ccb0c18b3aa27ba.png" ></a></p><h4 id="输入命令"><a href="#输入命令" class="headerlink" title="输入命令"></a>输入命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ sudo apt install rpm<span class="hljs-string">&quot;</span><br></code></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/978ed2e64e4a4544b8857386db916a5e.png" ></a></p><p>打Y</p><p><img src="https://img-blog.csdnimg.cn/00af79d325e94dd79e6292cdaf1a41b8.png" ></a></p><h2 id="解决"><a href="#解决" class="headerlink" title="解决!"></a>解决!</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2023/02/22/12/"/>
     <url>/2023/02/22/12/</url>
